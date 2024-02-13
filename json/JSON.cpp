@@ -272,7 +272,7 @@ void JSON::parseFile(const std::string& filename)
       std::string st;
       char buf[1024];
       size_t size;
-      while (size=fread((char*)&buf,1,1023,f))
+      while ((size=fread((char*)&buf,1,1023,f)))
       {
          buf[size]=0;
          st+=(char*)&buf;
